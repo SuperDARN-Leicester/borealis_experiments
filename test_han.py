@@ -30,6 +30,7 @@ class Normalscan(ExperimentPrototype):
         freq = kwargs.get("freq", scf.COMMON_MODE_FREQ_1)
 
         self.add_slice({  # slice_id = 0, there is only one slice.
+             #slice['cfs_range'] = [11000, 11300]  # Lower and upper freq limit in kHz
             "pulse_sequence": scf.SEQUENCE_7P,
             "tau_spacing": scf.TAU_SPACING_7P,
             "pulse_len": scf.PULSE_LEN_45KM,
@@ -41,7 +42,7 @@ class Normalscan(ExperimentPrototype):
             "tx_beam_order": beams_to_use,
             "scanbound": scf.easy_scanbound(scf.INTT_7P, beams_to_use), #1 min scan
             #"freq" : freq, #kHz
-            "freq" : 12000,
+            "freq" : 13490,
             "acf": True,
             "xcf": True,  # cross-correlation processing
             "acfint": True,  # interferometer acfs
