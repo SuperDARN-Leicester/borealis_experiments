@@ -40,8 +40,9 @@ class Normalscan(ExperimentPrototype):
             "rx_beam_order": beams_to_use,
             "tx_beam_order": beams_to_use,
             "scanbound": scf.easy_scanbound(scf.INTT_7P, beams_to_use), #1 min scan
-            #"freq" : freq, #kHz
-            "freq" : 12000,
+            "cfs_range": [11561, 11589],  # Band 3. Centered on 11.575 MHz
+            "cfs_fft_n" : 1024, # Number of samples used in the FFT during CFS processing
+            "cfs_pwr_threshold" : 6, # Threshold power difference that a CFS scan must exceed before a frequency is switched, dB
             "acf": True,
             "xcf": True,  # cross-correlation processing
             "acfint": True,  # interferometer acfs
