@@ -34,7 +34,10 @@ class Politescan(ExperimentPrototype):
             "beam_angle": scf.STD_16_BEAM_ANGLE,
             "rx_beam_order": beams_to_use,
             "scanbound" : scf.easy_scanbound(scf.INTT_7P, beams_to_use),
-            "freq" : 10500, #kHz
+            "cfs_range": [11561, 11589],  # Band 3. Centered on 11.575 MHz
+            "cfs_fft_n" : 1024, # Number of samples used in the FFT during CFS processing
+            "cfs_pwr_threshold" : 6, # Threshold power difference that a CFS scan must exceed before a frequency is switched, dB
+            #"freq" : 10500, #kHz
             "acf": True,
             "xcf": True,  # cross-correlation processing
             "acfint": True,  # interferometer acfs

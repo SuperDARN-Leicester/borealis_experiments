@@ -14,8 +14,7 @@ import borealis_experiments.superdarn_common_fields as scf
 
 
 class EclipseSound(ExperimentPrototype):
-    cpid = 1103
-
+    cpid = 6103
     def __init__(self):
         sounding_beams = [3, 9]
         han_freq_bands = ([9051, 9129],     #0
@@ -29,7 +28,7 @@ class EclipseSound(ExperimentPrototype):
                           [19426, 19669],   #8
                           [19811, 19979])   #9
 
-        SOUNDING_FREQ_HAN = [9120, 9970, 11160, 11563, 13455, 13889, 16255] #insert frequencies from scan here
+        SOUNDING_FREQ_HAN = [9060, 9920, 11160, 11571, 13465, 13884, 16350] #insert frequencies from scan here
 
         if scf.IS_FORWARD_RADAR:
             beam_order = scf.STD_16_FORWARD_BEAM_ORDER
